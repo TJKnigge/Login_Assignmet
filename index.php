@@ -5,14 +5,48 @@
         <title>Login page</title>
 <!--        <link rel = "stylesheet" type = "text/css" href="login_style_sheet">-->
         
-        
+        <style>
+            
+            body{
+                background: #0099ff
+            }
+            
+            #form{
+                border: black 1px; 
+                border-radius: 5px;
+                margin: 100px auto;
+                background: white;
+                padding: 40px;
+                width: 20%;
+            }
+            
+            #btn{
+                background-color: green;
+                color: whitesmoke;
+                padding: 5px;
+                margin-left: 69%;
+            }            
+    
+            h1{
+                text-align: center;
+            }
+            
+            h4{
+                margin-top: 20px;
+            }
+            
+        </style> 
         
         
     </head>
     <body>
+        
+        <h1><font color="darkred">Welcom to the universal production!</h1>
+        
         <div id = "form">
             <form method=" POST" > 
 <!--                action="login_session.php">-->
+        <h4> <font color="black">Please enter username and password</h4>
             <p>
                 <label>Username:</label>
                 <input type="text" id="user" name="user" required>
