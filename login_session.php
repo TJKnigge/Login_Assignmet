@@ -1,8 +1,9 @@
 <?php
 
+session_start();
 require ('session.php');
 
-    session_start();
+    
 
     if (isset($_POST)& !empty($_POST)){
                 
@@ -16,6 +17,12 @@ require ('session.php');
         $result= mysqli_query($conn, $sql)
                or die("Failed to connect to DB" . mysqli_error());
 
+        $row= mysqli_fetch_array($result);
+        if($row['username'] == $username && $row['password'] == $password){
+           echo "Login success full! Welcome " .  $row['username'];
+       } else {
+            echo "Sorry, you are not in our database " . $username . "!";
+       }
        
         
         
