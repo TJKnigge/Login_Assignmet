@@ -36,13 +36,10 @@
             </p>
             <p>
                 Email adress:<input type="email" name="email" placeholder="john@example.tst" required ><br>
-            </p>            
-            <p>
-                <button type="submit" id="submit" value="login" > Submit </button>
-            </p>
+            
             <p>
                 <button class="primary" id="submit" value="submit" > Submit </button>
-                <a class="primary" href="index.php"></a>
+                <a class="primary" href="logout_session.php">Logout</a>
             </p>
             
             

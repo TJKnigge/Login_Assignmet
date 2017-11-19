@@ -28,10 +28,11 @@
                 <a type="submit" href="logout_session.php"></a>
             </p>-->
             <p>
-                <button class="primary" id="reg" value="register" > Register </button>
-                <a class="primary" href="Register_session.php"></a>
-            </p>
-    
+                
+                <!--<button class="primary" id="reg" value="register"  href="Register_session.php"> Register</button>-->
+                <a class="primary" href="Register_session.php">Register</a>
+          
+            </p>   
             
             </form>   
         </div>
