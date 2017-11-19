@@ -32,10 +32,10 @@
                 Username:<input type="text" id="nwuser" name="nwuser" placeholder="new user" required>
             </p>
             <p>
-                Password:<input type="password" id="passw" name="passw" placeholder="passwoord" required>
+                Password:<input type="password" id="nwpassw" name="nwpassw" placeholder="passwoord" required>
             </p>
             <p>
-                Email adress:<input type="email" name="email" placeholder="john@example.tst" required ><br>
+                Email adress:<input type="email" id="email" name="email" placeholder="john@example.tst" required ><br>
             
             <p>
                 <button class="primary" id="submit" value="submit" > Submit </button>
@@ -48,20 +48,37 @@
         </div>
 
 
- alert(hi);
+
 
     <?php
-
-       session_start();
+        
+       
+       
        require ('session.php');
-       require ('index.php');
+//       require ('index.php');
        
+       if (isset($_POST)& !empty($_POST)){
+                
        
+        $username= $_POST['nwuser'];
+        $password= $_POST['nwpassw'];
+        $email= $_POST['email'];
        
+       $sql= "INSERT INTO `users`(`username`, `password`, `e-mail`) VALUES ('$username', '$password', '$email')";
        
+       echo $Sql;
+       $result= mysqli_query($conn, $sql)
+               or die("Failed to connect to DB" . mysqli_error());
        
+       if($result){
+        
+        echo "Your registrastion is now complete ";
+       }else{
+           
+           echo " Sorry please try again";
+       }
        
-       
+       }
        
     ?>
 
