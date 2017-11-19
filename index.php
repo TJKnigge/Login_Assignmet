@@ -23,7 +23,15 @@
             <p>
                 <button type="submit" id="btn" value="login" > Login </button>
             </p>
-            
+<!--            <p>
+                <button type="submit" id="out" value="logout" > Logout </button>
+                <a type="submit" href="logout_session.php"></a>
+            </p>-->
+            <p>
+                <button class="primary" id="reg" value="register" > Register </button>
+                <a class="primary" href="Register_session.php"></a>
+            </p>
+    
             
             </form>   
         </div>
@@ -36,69 +44,9 @@
         
        require ('login_session.php');
        require ('session.php');
-//       include 'logout_session';
-       
-        //function connectDB(){
-//        $hostname = 'localhost';            
-//        $databasenaam = 'login';
-//        $username = $_POST['user'];
-//        $password = $_POST['passw'];
-        
-        
-//        $conn = mysqli_connect('localhost', $username, $password,'login');
-        
-        
-        
-        //$conn= new mysqli($hostname, $username, $password, $databasenaam);
-        //return $conn;
-        //}
-        
-        
-//        $conn= connectDB();
-        
-        
-          
-       
-      //login
-        
-        
-        
-        
-        
-        
-        
-        
-//      $row= mysqli_fetch_array($conn);
-//        if($row['username'] == $username && $row['password'] == $password){
-//           echo "Login suucess full! Welcome". $row['username'];
-//       } else {
-//           echo "Failed to login!";  
-//       }
-//        
-        
-        
-       
-       
-       
-       
-       
-       
-       
-        
-       //$selectDB = mysqli_select_db($C, 'Login'); 
-        
-//        mysqli_select_db("login");
-//
-//        $sql= mysqli_query("select* from users where username='$username' and password='$password'")
-//               or die("Failed to connect to DB" . mysqli_error());
-//       
-//        $row= mysqli_fetch_array($sql);
-//        if($row['username'] === $username && $row['password'] === $password){
-//           echo "Login suucess full! Welcome". $row['username'];
-//       } else {
-//           echo "Failed to login!";
-//       }
-//               
+//       require ('logout_session.php');
+//       require ('Register_session.php');
+
                
         ?>
     </body>

@@ -19,9 +19,14 @@ require ('session.php');
 
         $row= mysqli_fetch_array($result);
         if($row['username'] == $username && $row['password'] == $password){
-           echo "Login success full! Welcome " .  $row['username'];
+           echo "<div style='text-align:center'><h4>Login success full! Welcome " .  $row['username']. "</h4></div>";
+           readfile("form.php");
+           
        } else {
-            echo "Sorry, you are not in our database " . $username . "!";
+            echo "<div style='text-align:center'><h4>Sorry, you are not in our database " . $username . "!</h4></div>";
+
+            echo "<div style='text-align:center'><h4>Please register as a new user</h4></div>";
+           
        }
        
         
