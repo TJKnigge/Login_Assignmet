@@ -55,21 +55,27 @@
        
        
        require ('session.php');
-//       require ('index.php');
+
        
        if (isset($_POST)& !empty($_POST)){
                 
        
+           
         $username= $_POST['nwuser'];
         $password= $_POST['nwpassw'];
         $email= $_POST['email'];
        
+               
        $sql= "INSERT INTO `users`(`username`, `password`, `e-mail`) VALUES ('$username', '$password', '$email')";
        
        echo $Sql;
+       
+       
+       
        $result= mysqli_query($conn, $sql)
                or die("Failed to connect to DB" . mysqli_error());
        
+              
        if($result){
         
         echo "Your registrastion is now complete ";
